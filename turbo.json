@@ -1,0 +1,21 @@
+{
+   "$schema": "https://turborepo.org/schema.json",
+   "pipeline": {
+      "dev": { "persistent": true, "cache": false },
+      "lint": { "outputs": [] },
+      "lint:fix": { "outputs": [] },
+      "ts:check": { "outputs": [] },
+      "stylelint": { "outputs": [] },
+      "check": { "outputs": [] },
+      "build": {
+         "dependsOn": ["^build:lib"],
+         "outputs": ["dist/**"]
+      },
+      "build:lib": { "outputs": ["dist/**"] },
+      "test:unit:run": { "outputs": [] },
+      "test:integration:run": { "outputs": [] },
+      "test:e2e:run": { "outputs": [] },
+      "test:coverage": { "outputs": ["coverage/**"] },
+      "test:coverage:preview": { "outputs": [] }
+   }
+}
