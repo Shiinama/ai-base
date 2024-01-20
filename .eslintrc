@@ -76,20 +76,9 @@
   },
   "overrides": [
     {
-      "files": [
-        "packages/**/*.ts",
-        "packages/**/*.tsx",
-        "tooling/**/*/*.ts",
-        "scripts/**/*.ts"
-      ],
+      "files": ["packages/**/*.ts", "packages/**/*.tsx"],
       "parserOptions": {
         "project": ["tsconfig.json"]
-      }
-    },
-    {
-      "files": ["scripts/**/*.ts"],
-      "parserOptions": {
-        "project": ["scripts/tsconfig.json"]
       }
     }
   ]

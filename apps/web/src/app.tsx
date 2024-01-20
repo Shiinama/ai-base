@@ -8,12 +8,12 @@ import {
 import Home from "./pages/home"
 import { ChakraProvider } from "@chakra-ui/react"
 import { extendTheme } from "@chakra-ui/react"
-import useResize from "./hooks/useResize"
 import GuidePage from "./pages/guide"
+import useResize from "./hooks/useResize"
 
 const theme = extendTheme({
   config: {
-    initialColorMode: "light",
+    initialColorMode: "dark",
     useSystemColorMode: false,
   },
 })
@@ -29,7 +29,6 @@ function App() {
 }
 
 export default function WrappedApp() {
-  // While the blocklet is deploy to a sub path, this will be work properly.
   useResize()
   return (
     <ChakraProvider theme={theme}>

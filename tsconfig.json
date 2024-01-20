@@ -2,8 +2,9 @@
   "compilerOptions": {
     "target": "ESNext",
     "module": "NodeNext",
+    "moduleResolution": "NodeNext",
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
-    "types": ["node", "vitest/globals"],
+    "types": ["node"],
     "allowJs": true,
     "declaration": true,
     "sourceMap": true,
