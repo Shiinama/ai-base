@@ -1,0 +1,94 @@
+{
+  "name": "@ai-base/ai-runtime",
+  "version": "0.0.1",
+  "description": "Runtime for AI Kits",
+  "publishConfig": {
+    "access": "public"
+  },
+  "author": "Felix",
+  "license": "ISC",
+  "main": "dist/cjs/index.cjs",
+  "module": "dist/esm/index.mjs",
+  "types": "dist/types/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.js"
+    },
+    "./api": {
+      "import": "./dist/api/index.js",
+      "require": "./dist/api/index.js"
+    },
+    "./api/*": {
+      "import": "./dist/api/*.js",
+      "require": "./dist/api/*.js"
+    },
+    "./components": {
+      "import": "./dist/components/index.js",
+      "require": "./dist/components/index.js"
+    },
+    "./types": {
+      "import": "./dist/types/index.js",
+      "require": "./dist/types/index.js"
+    },
+    "./core": {
+      "import": "./dist/core/index.js",
+      "require": "./dist/core/index.js"
+    }
+  },
+  "typesVersions": {
+    "*": {
+      "*": [
+        "./dist/types/index.d.ts"
+      ],
+      "api": [
+        "./dist/types/api/index.d.ts"
+      ],
+      "api/*": [
+        "./dist/types/api/*.d.ts",
+        "./dist/types/api/*/index.d.ts"
+      ],
+      "components": [
+        "./dist/types/components/index.d.ts"
+      ],
+      "types": [
+        "./dist/types/types/index.d.ts"
+      ],
+      "core": [
+        "./dist/types/core/index.d.ts"
+      ]
+    }
+  },
+  "files": [
+    "dist",
+    "LICENSE",
+    "package.json",
+    "README.md",
+    "tsconfig.json"
+  ],
+  "scripts": {
+    "dev": "pnpm build:fast --watch",
+    "build": "tsup src --dts",
+    "build:fast": "tsup src",
+    "lint": "eslint . --ext .ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "ahooks": "^3.7.8",
+    "axios": "^1.6.5",
+    "dayjs": "^1.11.10",
+    "lodash": "^4.17.21"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-router-dom": "^6.16.0"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.202",
+    "@types/node-fetch": "^2.6.11",
+    "@types/react": "^18.2.48",
+    "react": "^18.2.0",
+    "react-router-dom": "^6.21.2",
+    "typescript": "^4.9.5"
+  }
+}

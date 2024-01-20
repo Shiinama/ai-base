@@ -1,17 +1,22 @@
 {
-   "extends": "@react-vite-trpc/tsconfig/react.json",
-   "compilerOptions": {
-      "baseUrl": "src",
-      "outDir": "dist",
-      "composite": false
-   },
-   "include": ["src", "cypress", "vite.config.ts", "vitest.setup.ts"],
-   "references": [
-      {
-         "path": "../server"
-      },
-      {
-         "path": "../../@react-vite-trpc/ui/tsconfig.json"
-      }
-   ]
+  "compilerOptions": {
+    "target": "ESNext",
+    "useDefineForClassFields": true,
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "allowJs": false,
+    "skipLibCheck": true,
+    "esModuleInterop": false,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "module": "NodeNext",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "customConditions": ["source"]
+  },
+  "exclude": ["node_modules"],
+  "include": ["src"],
+  "references": [{ "path": "./tsconfig.node.json" }]
 }

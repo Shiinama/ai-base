@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.profileCard {
+  box-shadow: 0 0 40px rgba(0, 0, 139, 0.2), -5px -5px 10px rgba(0, 0, 139, 0.8), 5px -5px 40px rgba(0, 0, 139, 0.8),
+    -5px 5px 10px rgba(0, 0, 139, 0.2), 5px 5px 10px rgba(0, 0, 139, 0.2);
+  position: absolute;
+  backface-visibility: hidden;
+}
+
+#app {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #000;
+}

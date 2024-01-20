@@ -1,25 +1,10 @@
 {
-   "tabWidth": 3,
-   "printWidth": 120,
-   "semi": false,
-   "singleQuote": true,
-   "arrowParens": "avoid",
-   "trailingComma": "es5",
-   "plugins": ["./node_modules/@trivago/prettier-plugin-sort-imports"],
-   "importOrderSeparation": true,
-   "importOrderSortSpecifiers": true,
-   "importOrder": [
-      "<THIRD_PARTY_MODULES>",
-
-      "^helpers$",
-      "(.*)helpers$",
-
-      "^utils$",
-      "(.*)utils$",
-
-      "^types(.*)",
-      "(.*)types$",
-
-      "^[./]"
-   ]
+  "bracketSpacing": true,
+  "jsxSingleQuote": false,
+  "printWidth": 80,
+  "proseWrap": "always",
+  "semi": false,
+  "singleQuote": false,
+  "tabWidth": 2,
+  "trailingComma": "all"
 }
