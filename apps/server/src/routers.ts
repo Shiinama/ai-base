@@ -1,10 +1,11 @@
-import { RequestHandler } from "express"
-import type { ParamsDictionary, Response } from "express-serve-static-core"
+import { RequestHandler, Response } from "express"
 import { formatZodError } from "@/utils"
 import { routes as helloRouter } from "@/routers/hello"
 import { routes as userRoutes } from "@/routers/user"
 import { routes as tagRoutes } from "@/routers/tag"
 import { routes as categoryRoutes } from "@/routers/category"
+
+type ParamsDictionary = Record<string, string>
 
 export type SuccessBody<TData = any> = {
   code: 200

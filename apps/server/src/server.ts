@@ -1,7 +1,3 @@
-/*
- *   ENTRY POINT OF THE SERVER
- */
-
 import Express from "express"
 
 import { routes } from "@/routers"

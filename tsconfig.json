@@ -16,8 +16,8 @@
     "esModuleInterop": true,
     "resolveJsonModule": true,
     "allowSyntheticDefaultImports": true,
-    "downlevelIteration": true,
-    "customConditions": ["source"]
+    "downlevelIteration": true
+    // "customConditions": ["source"]
   },
   "include": ["packages"],
   "exclude": ["node_modules"]

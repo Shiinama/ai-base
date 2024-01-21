@@ -1,11 +1,12 @@
-import React from 'react';
-import useProfileStore from '../../src/store/ProfileStore';
-import MotionButton from './MotionButton';
-import { AspectRatio, Image } from '@chakra-ui/react';
+import useProfileStore from "../../src/store/ProfileStore"
+import MotionButton from "./MotionButton"
+import { AspectRatio, Image } from "@chakra-ui/react"
 
-export const isEmpty = (object, fields) => {
-  return fields.every((field) => !object[field] || object[field].trim().length === 0);
-};
+export const isEmpty = (object: any, fields: any) => {
+  return fields.every(
+    (field: any) => !object[field] || object[field].trim().length === 0,
+  )
+}
 
 const Empty = () => {
   return (
@@ -16,12 +17,16 @@ const Empty = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-const ProfilePreview = ({ onButtonClick }: { onButtonClick: (value: boolean) => void }) => {
-  const profileInfo = useProfileStore((state) => state.profileInfo);
-  const isProfileEmpty = isEmpty(profileInfo, ['name', 'email', 'phone']);
+const ProfilePreview = ({
+  onButtonClick,
+}: {
+  onButtonClick: (value: boolean) => void
+}) => {
+  const profileInfo = useProfileStore((state) => state.profileInfo)
+  const isProfileEmpty = isEmpty(profileInfo, ["name", "email", "phone"])
   return (
     <div className="flex w-full h-full pb-6 flex-col justify-between items-center">
       {isProfileEmpty ? (
@@ -29,7 +34,11 @@ const ProfilePreview = ({ onButtonClick }: { onButtonClick: (value: boolean) => 
       ) : (
         <div className="w-full">
           <AspectRatio className="w-full bg-gradient-custom" ratio={1}>
-            <Image className="md:rounded-t-lg" alt="avatar" src={profileInfo.avatar} />
+            <Image
+              className="md:rounded-t-lg"
+              alt="avatar"
+              src={profileInfo.avatar}
+            />
           </AspectRatio>
           <div className="space-y-4 my-6 flex flex-col items-center">
             <p className="text-4xl">{profileInfo.name}</p>
@@ -41,7 +50,7 @@ const ProfilePreview = ({ onButtonClick }: { onButtonClick: (value: boolean) => 
 
       <MotionButton onClick={() => onButtonClick(false)}>Edit</MotionButton>
     </div>
-  );
-};
+  )
+}
 
-export default ProfilePreview;
+export default ProfilePreview
