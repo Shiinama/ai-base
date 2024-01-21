@@ -17,7 +17,6 @@
     "resolveJsonModule": true,
     "allowSyntheticDefaultImports": true,
     "downlevelIteration": true
-    // "customConditions": ["source"]
   },
   "include": ["packages"],
   "exclude": ["node_modules"]

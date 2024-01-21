@@ -1,5 +1,5 @@
 {
-  "name": "@ai-base/ai-runtime",
+  "name": "@ai-base/runtime",
   "version": "0.0.1",
   "description": "Runtime for AI Kits",
   "publishConfig": {

@@ -4,12 +4,13 @@ import {
   Route,
   Navigate,
 } from "react-router-dom"
-
+import "@ai-base/ui"
 import Home from "./pages/home"
 import { ChakraProvider } from "@chakra-ui/react"
 import { extendTheme } from "@chakra-ui/react"
 import GuidePage from "./pages/guide"
 import useResize from "./hooks/useResize"
+import ChatPage from "./pages/chat"
 
 const theme = extendTheme({
   config: {
@@ -23,6 +24,7 @@ function App() {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/guide" element={<GuidePage />} />
+      <Route path="/chat" element={<ChatPage />} />
       <Route path="*" element={<Navigate to="/guide" />} />
     </Routes>
   )

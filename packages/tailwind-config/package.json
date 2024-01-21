@@ -1,0 +1,10 @@
+{
+  "name": "@ai-base/tailwind-config",
+  "version": "0.0.1",
+  "sideEffects": false,
+  "private": true,
+  "main": "index.js",
+  "dependencies": {
+    "tailwindcss": "^3.3.6"
+  }
+}
