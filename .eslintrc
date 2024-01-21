@@ -79,6 +79,12 @@
       "parserOptions": {
         "project": ["tsconfig.json"]
       }
+    },
+    {
+      "files": ["apps/web/*.ts", "packages/web/*.tsx"],
+      "parserOptions": {
+        "project": ["apps/web/tsconfig.json"]
+      }
     }
   ]
 }
