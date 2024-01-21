@@ -5,7 +5,7 @@ dist
 node_modules/
 npm-debug.log
 packages/**/lib
-apps/**/.next
+packages/**/.next
 storybook-static
 packages/**/coverage
 packages/**/node_modules
@@ -20,7 +20,7 @@ packages/**/tsconfig.tsbuildinfo
 tsconfig.tsbuildinfo
 .next
 .idea
-.eslintcache
+
 # Local Netlify folder
 .netlify
 .idea
@@ -65,6 +65,7 @@ bower_components
 
 # Compiled binary addons (http://nodejs.org/api/addons.html)
 build/Release
+
 # Dependency directories
 node_modules/
 jspm_packages/

@@ -7,8 +7,11 @@
     "dev": "turbo dev",
     "build:packages": "turbo --filter \"./packages/*\" build",
     "dev:packages": "turbo --filter \"./packages/*\" dev",
-    "lint": "eslint packages --ext .ts,.tsx --config .eslintrc --cache",
     "typecheck": "turbo typecheck",
+    "lint": "eslint packages --ext .ts,.tsx --config .eslintrc --cache",
+    "format:check": "prettier --check packages --cache",
+    "format:write": "prettier --write packages --cache",
+    "clean": "pnpm -r --parallel exec rimraf dist *.log",
     "prepare": "husky install"
   },
   "engines": {

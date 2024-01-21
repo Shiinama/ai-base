@@ -1,6 +1,5 @@
-packages/*/dist/
+dist
 node_modules
 coverage
 .next
 build
-apps/**/.next
