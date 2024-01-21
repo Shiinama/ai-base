@@ -19,5 +19,5 @@
     "downlevelIteration": true
   },
   "include": ["packages"],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules", "**/tsconfig.json"]
 }
