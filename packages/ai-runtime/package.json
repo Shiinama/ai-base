@@ -67,11 +67,11 @@
     "tsconfig.json"
   ],
   "scripts": {
-    "dev": "pnpm build:fast --watch",
     "build": "tsup src --dts",
-    "build:fast": "tsup src",
-    "lint": "eslint . --ext .ts",
-    "typecheck": "tsc --noEmit"
+    "dev": "pnpm build:fast --watch",
+    "clean": "rimraf dist .turbo",
+    "typecheck": "tsc --noEmit",
+    "build:fast": "tsup src"
   },
   "dependencies": {
     "ahooks": "^3.7.8",

@@ -19,6 +19,6 @@
     "downlevelIteration": true,
     "customConditions": ["source"]
   },
-  "include": ["apps", "packages"],
+  "include": ["packages"],
   "exclude": ["node_modules"]
 }
